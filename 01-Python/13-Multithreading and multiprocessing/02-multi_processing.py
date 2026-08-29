@@ -2,6 +2,11 @@
 ### CPU-Bound Tasks-Tasks that are heavy on CPU usage (e.g., mathematical computations, data processing).
 ## PArallel execution- Multiple cores of the CPU
 
+## with multithreading we had one process in which two thread
+
+## with multiprocessing process 1-square, process2-cubes -multiple separate processes working independenetly
+
+
 import multiprocessing
 
 import time
@@ -16,6 +21,7 @@ def cube_numbers():
         time.sleep(1.5)
         print(f"Cube: {i * i * i}")
 
+##"Run the following code only when this Python file is being run directly."
 if __name__=="__main__":
 
     ## create 2 processes
