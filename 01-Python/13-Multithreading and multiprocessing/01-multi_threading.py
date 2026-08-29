@@ -17,17 +17,17 @@ def print_letter():
         print(f"Letter: {letter}")
 
 ##create 2 threads
-t1=threading.Thread(target=print_numbers)
-t2=threading.Thread(target=print_letter)
+t1=threading.Thread(target=print_numbers)  ## create a thread and call it t1 whose job is to execute print_numbers.
+t2=threading.Thread(target=print_letter) ## create a thread and call it t2
 
-t=time.time()
+t=time.time() ##gives us the current time
 ## start the thread
 t1.start()
 t2.start()
 
 ### Wait for the threads to complete
-t1.join()
-t2.join()
+t1.join() ## main program wait for t1 to finish
+t2.join() ## main program wait for t2 to finish
 
 finished_time=time.time()-t
 print(finished_time)
