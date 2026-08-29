@@ -10,11 +10,11 @@ CPU cores, improving performance.
 
 import multiprocessing
 import math
-import sys
+import sys ##sys gives us access to various Python/system settings.
 import time
 
 # Increase the maximum number of digits for integer conversion
-sys.set_int_max_str_digits(100000)
+sys.set_int_max_str_digits(100000) ##It increases Python's allowed number of digits when converting large integers to strings.
 
 ## function to compute factorials of a given number 
 
@@ -30,7 +30,7 @@ if __name__=="__main__":
     start_time=time.time()
 
     ##create a pool of worker processes
-    with multiprocessing.Pool() as pool:
+    with multiprocessing.Pool() as pool: ##creates a pool of processes.multiprocessing.pool()
         results=pool.map(computer_factorial,numbers)
 
     end_time=time.time()
