@@ -18,8 +18,8 @@ https://python.langchain.com/v0.2/docs/tutorials/
 '''
 
 import threading
-import requests
-from bs4 import BeautifulSoup
+import requests ##This is a Python library used to send HTTP requests.
+from bs4 import BeautifulSoup ##BeautifulSoup helps Python read and extract useful information from that HTML
 
 urls=[
 'https://python.langchain.com/v0.2/docs/introduction/',
@@ -29,9 +29,10 @@ urls=[
 'https://python.langchain.com/v0.2/docs/tutorials/'
 
 ]
-
+##BeautifulSoup takes that HTML and makes it easier to work with 'html.parser' 
 def fetch_content(url):
     response=requests.get(url)
+
     soup=BeautifulSoup(response.content,'html.parser')
     print(f'Fetched {len(soup.text)} characters from {url}')
 
